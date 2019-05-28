@@ -1,0 +1,123 @@
+<td-layout>
+    
+    <td-layout-nav  [toolbarTitle]="name" >
+      
+      <div td-toolbar-content layout="row" layout-align="start center" flex>
+        <span flex></span>
+      </div>
+      <!-- router outlet goes here -->
+      <div flex layout-gt-sm="row" tdMediaToggle="gt-xs" layout-wrap [mediaClasses]="['push-sm']">
+          <div flex-gt-sm="50">
+            <mat-card>
+              <mat-card-title>
+                <div layout="row" layout-align="start center">
+                  <span flex>Stores vs Yearly Sales</span>
+                </div>
+              </mat-card-title>
+              <mat-divider></mat-divider>
+              <div [style.height.px]="280" class="push-top-sm">
+                <ngx-charts-line-chart
+                  [scheme]="{ domain: [ '#4DD0E1', '#BA68C8', '#FF7043','#7e4ce1','#4be18a
+
+                  ' ] }"
+                  [results]="times"
+                  [gradient]="gradient"
+                  [autoScale]="false"
+                  [xAxis]="true"
+                  [yAxis]="true"
+                  [legend]="true"
+                  [showXAxisLabel]="true"
+                  [showYAxisLabel]="true"
+                  [xAxisLabel]="xAxisLabel"
+                  [yAxisLabel]="yAxisLabel"
+                  [xAxisTickFormatting]="axisDate">
+                </ngx-charts-line-chart>
+              </div>
+            </mat-card>
+          </div>
+          <div flex-gt-sm="50">
+            <mat-card>
+              <mat-card-title>
+                <div layout="row" layout-align="start center">
+                  <span flex>Stores vs Store Size</span>
+                </div>
+              </mat-card-title>
+              <mat-divider></mat-divider>
+              <div class="pad">
+                <div [style.height.px]="250">
+                    <ngx-charts-bar-vertical
+                    [view]="view"
+                    [scheme]="{ domain: [ '#4DD0E1', '#BA68C8', '#FF7043','#7e4ce1','#4be18a
+
+                    ' ] }"
+                    [results]="single"
+                    [gradient]="gradient"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [legend]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel">
+                  </ngx-charts-bar-vertical>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          <div flex-gt-sm="50">
+            <mat-card>
+              <mat-card-title>
+                <div layout="row" layout-align="start center">
+                  <span flex>Stores vs Yearly Sales</span>
+                </div>
+              </mat-card-title>
+              <mat-divider></mat-divider>
+              <div class="pad-top pad-bottom">
+                <div class="overflow-hidden" [style.height.px]="250">
+                  <div [style.height.px]="270">
+                    <ngx-charts-area-chart-stacked
+                      [scheme]="{ domain: [ '#4DD0E1', '#BA68C8', '#FF7043','#7e4ce1','#4be18a
+
+                      ' ] }"
+                      [results]="times"
+                      [gradient]="true"
+                      [xAxis]="true"
+                      [yAxis]="true"
+                      [legend]="false"
+                      [showXAxisLabel]="true"
+                      [showYAxisLabel]="true"
+                      [xAxisLabel]="xAxisLabel"
+                      [yAxisLabel]="yAxisLabel"
+                      [xAxisTickFormatting]="axisDate">
+                    </ngx-charts-area-chart-stacked>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          <div flex-gt-sm="50">
+            <mat-card>
+              <mat-card-title>
+                <div layout="row" layout-align="start center">
+                  <span flex>Table</span>
+                </div>
+              </mat-card-title>
+              <mat-divider></mat-divider>
+              <div class="pad-top pad-bottom">
+                <div class="overflow-hidden" [style.height.px]="250">
+                  <div [style.height.px]="270">
+                    <td-data-table
+                  [data]="data"
+                  [style.height.px]="250">
+                </td-data-table>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          
+        </div>
+            
+                
+    </td-layout-nav>
+  </td-layout>
