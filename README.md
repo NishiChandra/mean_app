@@ -13,17 +13,19 @@ Node Logic : Backend Folder
 Angular : Frontend Folder
 
 Open Cmd prompt in backend folder:
-Run command for importing Csv into mongodb:
+Run command for importing CSV into mongodb:
 mongoimport --db dbname --collection collectionName --type csv --file filename.csv --headerline
 
 For running backend logic:
+
 Run cmd 
+Command: npm install
 Command : nodemon server.js
 Access server on https://localhost:3000/
 
 For running frontend logic:
 Run cmd
-Command: ng serve
+Command: ng serve --open
 Access frontend on https://localhost:4200
 
 
