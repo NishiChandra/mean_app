@@ -26,6 +26,8 @@
                   [xAxis]="true"
                   [yAxis]="true"
                   [legend]="true"
+                  [xAxisLabel]="'Year'"
+                  [yAxisLabel]="'Sales($)'"
                   [showXAxisLabel]="true"
                   [showYAxisLabel]="true"
                   [xAxisLabel]="xAxisLabel"
@@ -43,7 +45,7 @@
                 </div>
               </mat-card-title>
               <mat-divider></mat-divider>
-              <div class="pad">
+              <div class="pad" [style.height.px]="250">
                 <div [style.height.px]="250">
                     <ngx-charts-bar-vertical
                     [view]="view"
@@ -54,6 +56,8 @@
                     [gradient]="gradient"
                     [xAxis]="true"
                     [yAxis]="true"
+                    [xAxisLabel]="'Stores'"
+                    [yAxisLabel]="'Size'"
                     [legend]="true"
                     [showXAxisLabel]="true"
                     [showYAxisLabel]="true"
@@ -73,8 +77,8 @@
               </mat-card-title>
               <mat-divider></mat-divider>
               <div class="pad-top pad-bottom">
-                <div class="overflow-hidden" [style.height.px]="250">
-                  <div [style.height.px]="270">
+                <div class="overflow-hidden" [style.height.px]="280">
+                  <div [style.height.px]="280">
                     <ngx-charts-area-chart-stacked
                       [scheme]="{ domain: [ '#4DD0E1', '#BA68C8', '#FF7043','#7e4ce1','#4be18a
 
@@ -84,6 +88,8 @@
                       [xAxis]="true"
                       [yAxis]="true"
                       [legend]="false"
+                      [xAxisLabel]="'Year'"
+                      [yAxisLabel]="'Sales($)'"
                       [showXAxisLabel]="true"
                       [showYAxisLabel]="true"
                       [xAxisLabel]="xAxisLabel"
@@ -104,11 +110,11 @@
               </mat-card-title>
               <mat-divider></mat-divider>
               <div class="pad-top pad-bottom">
-                <div class="overflow-hidden" [style.height.px]="250">
-                  <div [style.height.px]="270">
+                <div class="overflow-hidden" [style.height.px]="280">
+                  <div [style.height.px]="280">
                     <td-data-table
                   [data]="data"
-                  [style.height.px]="250">
+                  [style.height.px]="280">
                 </td-data-table>
                   </div>
                 </div>
