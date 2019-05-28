@@ -16,7 +16,9 @@ Open Cmd prompt in backend folder:
 Run command for importing CSV into mongodb:
 
 Sales.csv: mongoimport --db assignment --collection Sales --type csv --file sales.csv --headerline
+
 Stores.csv: mongoimport --db assignment --collection stores --type csv --file storesdata-set.csv --headerline
+
 desc.csv: mongoimport --db assignment --collection desc --type csv --file desc.csv --headerline
 
 For running backend logic:
