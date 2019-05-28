@@ -23,14 +23,18 @@ desc.csv: mongoimport --db assignment --collection desc --type csv --file desc.c
 
 For running backend logic:
 
-Run cmd 
-Command: npm install
-Command : nodemon server.js
+First Command: npm install
+
+Command for running node : nodemon server.js
+
 Access server on https://localhost:3000/
+
 
 For running frontend logic:
 Run cmd
+
 Command: ng serve --open
+
 Access frontend on https://localhost:4200
 
 
